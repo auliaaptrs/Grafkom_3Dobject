@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulia Putri Salsabila</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url("data/Pattern.jpg");
+            background-blend-mode: overlay;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 95%;
+            max-width: 1200px;
+            position: relative;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1), 0 4px 15px rgba(0, 0, 0, 0.15);
+            height: 85vh;
+        }
+
+        .left {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .canvas-container {
+            top: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .zoom-buttons {
+            position: absolute;
+            bottom: 20px; 
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .zoom-buttons button {
+            padding: 10px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50%;
+            background: #fd6812;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .zoom-buttons button:hover {
+            background: #000000;
+        }
+        .zoom-buttons .reset {
+            padding: 10px 15px;
+            font-size: 1rem;
+            font-weight: bold; /* Font bold untuk tulisan 'Reset' */
+            border: none;
+            border-radius: 50px;
+            background: #fd6812;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .zoom-buttons .reset:hover {
+            background: #000000;
+        }
+
+
+        canvas {
+            border: 3px solid rgb(61, 55, 55);
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+        .right {
+            flex: 1;
+            padding: 20px;
+            background: #fefefe;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .right h1 {
+            margin: 0;
+            font-size: 2rem;
+            text-align: left;
+            color: #fd6812;
+            font-weight: 600;
+        }
+
+        .right h2 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            text-align: left;
+            color: #555555;
+            font-weight: 400;
+        }
+
+        .right h2:last-child {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body onload="main()">
+    <div class="container">
+        <div class="left">
+            <div class="canvas-container">
+                <!-- Zoom Buttons -->
+                <div class="zoom-buttons">
+                    <button id="zoomIn" title="Zoom In">
+                        <i class="bi bi-zoom-in"></i>
+                    </button>
+                    <button id="zoomOut" title="Zoom Out">
+                        <i class="bi bi-zoom-out"></i>
+                    </button>
+                    <!-- Animation Button -->
+                    <button id="toggleAnimation" title="Pause Animation">
+                        <i class="bi bi-pause-fill"></i>
+                    </button>
+                    <!-- Reset Button -->
+                    <button id="reset" class="reset" title="Reset">Reset</button>
+                </div>
+
+                <canvas id="canvas" width="800" height="500"></canvas>
+
+        <div class="right">
+            <h1>Sirup Marjan</h1>
+            <h2>Aulia Putri Salsabila</h2>
+            <h2>5025221281</h2>
+            <h2>Grafika Komputer E</h2>
+        </div>
+    </div>
+
+    <!-- Local Scripts -->
+    <script type="text/javascript" src="js-src/parser.js"></script>
+    <script type="text/javascript" src="js-src/texture.js"></script>
+    <script type="text/javascript" src="js-src/m3.js"></script>
+    <script type="text/javascript" src="js-src/m4.js"></script>
+    <script type="text/javascript" src="js-src/webgl-utils.js"></script>
+    <script type="text/javascript" src="js-src/shader.js"></script>
+    <script type="text/javascript" src="js-src/main.js"></script>
+</body>
+</html>
