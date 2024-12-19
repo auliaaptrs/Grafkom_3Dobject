@@ -1,5 +1,6 @@
-# Blender
-![alt text](data/hp.png)
+# 3D Object Sirup Marjan
+### AULIA PUTRI SALSABILA
+### 5025221281 - GRAFIKA KOMPUTER E
 
-# WebGL
-![alt text](data/image.png)
+![alt text](data/SirupMarjanResult.png) 
+
